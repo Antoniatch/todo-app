@@ -25,6 +25,26 @@ body {
   min-height: 100vh;
 }
 
+.App {
+  display: flex;
+}
+
+.todo-card {
+  border: #646cff 1px solid;
+  border-radius: 10px;
+  padding: 30px;
+  margin: 0 40px;
+  width: 400px;
+  height: calc(0.5 * 100vh);
+  font-weight: 300;
+  text-align: justify;
+}
+
+.link {
+  width: 100%;
+  text-align: end;
+}
+
 a {
   font-weight: 500;
   color: #646cff;
@@ -35,7 +55,7 @@ a:hover {
 }
 
 h1 {
-  font-size: 3.2em;
+  font-size: 2em;
   line-height: 1.1;
 }
 

@@ -1,9 +1,11 @@
 import PropTypes from "prop-types";
 
+import { useContext, useState } from "react";
+import { TodoContext } from "../contexts/TodoContext";
+import { Link } from "react-router-dom";
+
 import Checkbox from "@mui/material/Checkbox";
 import Button from "@mui/material/Button";
-import { useContext, useEffect, useState } from "react";
-import { TodoContext } from "../contexts/TodoContext";
 
 const TodoItem = ({ item }) => {
   const { todoList, setTodoList } = useContext(TodoContext);
@@ -32,6 +34,8 @@ const TodoItem = ({ item }) => {
       sx={{
         textTransform: "none",
         width: "500px",
+        display: "flex",
+        justifyContent: "space-between",
       }}
     >
       <Checkbox
@@ -39,7 +43,9 @@ const TodoItem = ({ item }) => {
         checked={checked}
         onChange={handleCheck}
       />
-      <label htmlFor={item.id.toString()}>{item.title}</label>
+      <Link className="link" to={`todo/${item.id}`}>
+        <label htmlFor={item.id.toString()}>{item.title}</label>
+      </Link>
     </Button>
   );
 };
