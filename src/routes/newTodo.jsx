@@ -1,31 +1,9 @@
-import { useContext, useEffect, useState } from "react";
 import TodoCard from "../components/TodoCard";
-import { TodoContext } from "../contexts/TodoContext";
+import useInputs from "../hooks/useInputs";
 
 const NewTodo = () => {
-  const { todoList, setTodoList } = useContext(TodoContext);
-
-  const [title, setTitle] = useState("");
-  const [description, setDescription] = useState("");
-
-  const handleNewTodo = (e) => {
-    e.preventDefault();
-
-    const id = todoList.length;
-    const newTodo = {
-      id,
-      title,
-      description,
-      done: false,
-      lastUpdate: new Date(),
-    };
-
-    const todos = [...todoList];
-    todos.push(newTodo);
-    setTodoList(todos);
-    setTitle("");
-    setDescription("");
-  };
+  const { handleNewTodo, title, setTitle, description, setDescription } =
+    useInputs();
 
   return (
     <TodoCard

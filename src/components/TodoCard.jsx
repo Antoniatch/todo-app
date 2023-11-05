@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 
 import CloseOutlinedIcon from "@mui/icons-material/CloseOutlined";
 import { Button, Stack } from "@mui/material";
+import TextField from "@mui/material/TextField";
 
 const TodoCard = ({
   title,
@@ -18,21 +19,20 @@ const TodoCard = ({
 
       <form onSubmit={onSubmit}>
         <Stack spacing={2} padding="15px 0">
-          <input
-            className="input title"
-            type="text"
+          <TextField
+            variant="outlined"
+            label="Titre"
             required
-            placeholder="Titre"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
           />
-          <textarea
-            className="input description"
+          <TextField
+            multiline
             rows={10}
-            placeholder="Description"
+            label="Description"
             value={description}
             onChange={(e) => setDescription(e.target.value)}
-          ></textarea>
+          />
 
           <Button
             type="submit"

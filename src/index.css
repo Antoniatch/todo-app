@@ -52,20 +52,14 @@ body {
   text-align: end;
 }
 
-input,
-textarea {
-  border: none;
-  font-family: inherit;
+.title {
+  font-size: 2em;
+  line-height: 1.1;
 }
 
 input:focus,
 textarea:focus {
   outline: none;
-}
-
-.title {
-  font-size: 2em;
-  line-height: 1.1;
 }
 
 a {
@@ -80,6 +74,7 @@ a:hover {
 h1 {
   font-size: 2em;
   line-height: 1.1;
+  color: var(--hover);
 }
 
 ul {
