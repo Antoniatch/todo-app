@@ -1,6 +1,6 @@
 import { createContext, useState } from "react";
 
-const initialList = [
+export const initialList = [
   {
     id: 0,
     title: "Faire chauffer l'eau",
