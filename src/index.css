@@ -8,6 +8,9 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+
+  --link: #646cff;
+  --hover: #535bf2;
 }
 
 #root {
@@ -27,6 +30,7 @@ body {
 
 .App {
   display: flex;
+  align-items: center;
 }
 
 .todo-card {
@@ -35,14 +39,33 @@ body {
   padding: 30px;
   margin: 0 40px;
   width: 400px;
-  height: calc(0.5 * 100vh);
+  height: max-content;
+  min-height: 300px;
   font-weight: 300;
   text-align: justify;
+  display: flex;
+  flex-direction: column;
 }
 
 .link {
   width: 100%;
   text-align: end;
+}
+
+input,
+textarea {
+  border: none;
+  font-family: inherit;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+}
+
+.title {
+  font-size: 2em;
+  line-height: 1.1;
 }
 
 a {

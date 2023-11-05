@@ -8,6 +8,7 @@ import "./index.css";
 import { TodoContextProvider } from "./contexts/TodoContext.jsx";
 import ErrorPage from "./routes/error.jsx";
 import TodoDetail from "./routes/todoDetail.jsx";
+import NewTodo from "./routes/newTodo.jsx";
 
 const router = createBrowserRouter([
   {
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
       {
         path: "/todo/:todoId",
         element: <TodoDetail />,
+      },
+      {
+        path: "/todo/new",
+        element: <NewTodo />,
       },
     ],
   },
