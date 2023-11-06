@@ -10,23 +10,28 @@ import ErrorPage from "./routes/error.jsx";
 import TodoDetail from "./routes/todoDetail.jsx";
 import NewTodo from "./routes/newTodo.jsx";
 
-const router = createBrowserRouter([
+const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <App />,
+      errorElement: <ErrorPage />,
+      children: [
+        {
+          path: "/todo/:todoId",
+          element: <TodoDetail />,
+        },
+        {
+          path: "/todo/new",
+          element: <NewTodo />,
+        },
+      ],
+    },
+  ],
   {
-    path: "/",
-    element: <App />,
-    errorElement: <ErrorPage />,
-    children: [
-      {
-        path: "/todo/:todoId",
-        element: <TodoDetail />,
-      },
-      {
-        path: "/todo/new",
-        element: <NewTodo />,
-      },
-    ],
-  },
-]);
+    basename: import.meta.env.DEV ? "/" : "/todo-app/",
+  }
+);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>

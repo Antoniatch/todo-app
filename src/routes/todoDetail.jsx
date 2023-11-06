@@ -1,7 +1,8 @@
 import { useParams } from "react-router-dom";
 
-import TodoCard from "../components/TodoCard";
 import useInputs from "../hooks/useInputs";
+
+import TodoCard from "../components/TodoCard";
 
 const TodoDetail = () => {
   const { todoId } = useParams();

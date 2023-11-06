@@ -1,8 +1,7 @@
-import PropTypes from "prop-types";
-
-import { useContext, useState } from "react";
-import { TodoContext } from "../contexts/TodoContext";
 import { Link } from "react-router-dom";
+import { useContext, useState } from "react";
+
+import { TodoContext } from "../contexts/TodoContext";
 
 import Checkbox from "@mui/material/Checkbox";
 import Button from "@mui/material/Button";
@@ -51,7 +50,3 @@ const TodoItem = ({ item }) => {
 };
 
 export default TodoItem;
-
-TodoItem.propTypes = {
-  item: PropTypes.object.isRequired,
-};

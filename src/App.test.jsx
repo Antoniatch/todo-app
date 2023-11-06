@@ -1,9 +1,11 @@
 import { render, screen } from "@testing-library/react";
-import App from "../src/App";
-import { describe, expect, it } from "vitest";
-import Wrapper from "../tests/Wrapper";
-import { initialList } from "./contexts/TodoContext";
 import userEvent from "@testing-library/user-event";
+import { describe, expect, it } from "vitest";
+
+import { initialList } from "./contexts/TodoContext";
+
+import App from "../src/App";
+import Wrapper from "../tests/Wrapper";
 
 describe("App", () => {
   const user = userEvent.setup();

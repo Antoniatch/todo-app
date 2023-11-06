@@ -1,10 +1,7 @@
-import { getAllByRole, render, screen, waitFor } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import { describe, expect, it } from "vitest";
 import Wrapper from "../../tests/Wrapper";
-import App from "../App";
 import userEvent from "@testing-library/user-event";
-import NewTodo from "./newTodo";
-import { TodoContextProvider } from "../contexts/TodoContext";
 
 describe("Add a new to-do", () => {
   const user = userEvent.setup();

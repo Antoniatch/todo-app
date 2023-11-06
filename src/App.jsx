@@ -1,7 +1,8 @@
 import { useContext } from "react";
 import { TodoContext } from "./contexts/TodoContext";
-import TodoItem from "./components/TodoItem";
 import { Outlet } from "react-router-dom";
+
+import TodoItem from "./components/TodoItem";
 import NewTodoButton from "./components/NewTodoButton";
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
           ))}
         <NewTodoButton />
       </ul>
+
       <Outlet />
     </div>
   );
